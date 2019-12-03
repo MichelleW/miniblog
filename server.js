@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 // use local mongoDB 
 
-
 // DB config 
 const db = require('./config/keys').mongoURI;
 
