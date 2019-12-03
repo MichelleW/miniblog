@@ -64,7 +64,7 @@ class MiniBlog extends Component {
       <div className="MiniBlog">
         <form className="createNew" onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor='title'>Title</label>
+            <label for='title'>Title</label>
             <input
               type='text'
               name='title'
@@ -72,10 +72,10 @@ class MiniBlog extends Component {
               onChange={this.handleChange}
             />
 
-            <label htmlFor="content">Blog Content</label>
+            <label for="content">Blog Content</label>
             <input type="textarea" name="content" onChange={this.handleChange} />
 
-            <label htmlFor='name'>Author</label>
+            <label for='name'>Author</label>
             <input
               type='text'
               name='name'
