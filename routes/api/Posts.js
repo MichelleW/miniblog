@@ -23,7 +23,8 @@ router.post('/', (req, res) => {
   console.log('req.body',req.body)
   const newPost = new Post({
     name: req.body.name,
-    title: req.body.title
+    title: req.body.title,
+    content: req.body.content
   });
   newPost.save().then((post) => res.json(post))
 

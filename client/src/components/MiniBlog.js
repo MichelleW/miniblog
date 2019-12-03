@@ -70,11 +70,9 @@ class MiniBlog extends Component {
     }
     return blogPosts.map((post) => {
       return <div className="post" key={post._id}>
-        <h2>Blog Title: {post.title}</h2>
+        <h2>{post.title}</h2>
         <h5>Author: {post.name}</h5>
-        <p>Blog conent goes here {post.content}</p>
-        <small>Created By: {post.date}</small>
-        <p><small>{post._id}</small></p>
+        <p>{post.content}</p>
       </div>
     })
   }
@@ -92,13 +90,12 @@ class MiniBlog extends Component {
             <input
               type='text'
               name='title'
-              id='title'
               placeholder='...title for new blog'
               onChange={this.handleChange}
             />
 
             <label htmlFor="content">Blog Content</label>
-            <input type="textarea" name="content" id="content" onChange={this.handleChange} />
+            <input type="textarea" name="content" onChange={this.handleChange} />
 
             <label htmlFor='name'>Author</label>
             <input
