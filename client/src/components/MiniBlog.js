@@ -44,8 +44,30 @@ class MiniBlog extends Component {
   }
 
   displayBlogPosts = () => {
-    const { blogPosts } = this.state
-
+    let { blogPosts } = this.state
+    let more = [{
+      "_id": "5dd5f221bc72fc271113e174",
+      "name": "Mish",
+      "title": "A day in Mountain View",
+      "date": "2019-11-21T02:10:41.190Z",
+      "__v": 0
+    },
+      {
+        "_id": "5dd5f10dd9f47a2035fd9100",
+        "name": "hey",
+        "title": "testing",
+        "date": "2019-11-21T02:06:05.836Z",
+        "__v": 0
+      },
+      {
+        "_id": "5dd5a9aab12199c9cb3222d8",
+        "name": "Poke lunch",
+        "date": "2019-11-20T21:01:30.167Z",
+        "__v": 0
+      },]
+    if(blogPosts.length === 0){
+      this.setState({blogPosts: [...more]})
+    }
     return blogPosts.map((post) => {
       return <div className="post" key={post._id}>
         <h2>Blog Title: {post.title}</h2>
