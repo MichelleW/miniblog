@@ -9,8 +9,6 @@ const app = express();
 // Setup bodyParse Middleware
 app.use(bodyParser.json());
 
-// use local mongoDB 
-
 // DB config 
 const db = require('./config/keys').mongoURI;
 
@@ -18,7 +16,7 @@ const db = require('./config/keys').mongoURI;
 mongoose
   .connect('mongodb://localhost/db', { useNewUrlParser: true })
   .then(() => console.log('MongoDB connected...'))
-  .catch(err=>console.log(err))
+  .catch(err => console.log(err))
 
 app.use('/api/posts', posts);
 
