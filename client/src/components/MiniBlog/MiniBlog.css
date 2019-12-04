@@ -1,0 +1,51 @@
+.post {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 20px;
+  min-height: 160px;
+  vertical-align: top;
+  border: 2px solid #eee;
+  border-radius: 5px;
+}
+
+.post:hover {
+  cursor: pointer;
+  opacity: .5;
+  border-color: rgba(70, 67, 67, 0.8);
+
+}
+
+.createNew>div {
+  width: 70%;
+  margin: 10px auto;
+}
+
+label {
+  margin: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  font-size: 14px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ffcc99;
+  border-radius: 5px;
+  background-color: rgb(255, 204, 153, .6);
+  /* color: white; */
+}
+
+button:hover {
+  opacity: .8;
+  background-color: #ffcc99;
+}

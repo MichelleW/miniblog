@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class MiniBlog extends Component {
+import './MiniBlog.css';
+
+export default class MiniBlog extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -64,7 +66,7 @@ class MiniBlog extends Component {
       <div className="MiniBlog">
         <form className="createNew" onSubmit={this.handleSubmit}>
           <div>
-            <label for='title'>Title</label>
+            <label htmlFor='title'>Title</label>
             <input
               type='text'
               name='title'
@@ -72,10 +74,10 @@ class MiniBlog extends Component {
               onChange={this.handleChange}
             />
 
-            <label for="content">Blog Content</label>
+            <label htmlFor="content">Blog Content</label>
             <input type="textarea" name="content" onChange={this.handleChange} />
 
-            <label for='name'>Author</label>
+            <label htmlFor='name'>Author</label>
             <input
               type='text'
               name='name'
@@ -93,6 +95,4 @@ class MiniBlog extends Component {
       </div>
     );
   }
-}
-
-export default MiniBlog;
+} 
